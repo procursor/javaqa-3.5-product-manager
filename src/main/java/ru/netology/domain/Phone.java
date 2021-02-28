@@ -9,6 +9,11 @@ public class Phone extends Product {
         this.vendor = vendor;
     }
 
+    @Override
+    public boolean matches(String vendor) {
+        return super.matches(vendor) || this.vendor.equalsIgnoreCase(vendor);
+    }
+
     public String getVendor() {
         return vendor;
     }

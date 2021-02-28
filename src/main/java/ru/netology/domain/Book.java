@@ -8,6 +8,11 @@ public class Book extends Product {
         this.author = author;
     }
 
+    @Override
+    public boolean matches(String author) {
+        return super.matches(author) || this.author.equalsIgnoreCase(author);
+    }
+
     public String getAuthor() {
         return author;
     }
